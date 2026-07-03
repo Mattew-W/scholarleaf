@@ -1,0 +1,31 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Project specific
+monitor_logs/
+auto_screenshots/
+verify_stealth.png
+test_out.txt
+*.log
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
