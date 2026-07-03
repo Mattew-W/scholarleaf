@@ -25,18 +25,33 @@ python cli.py verify <URL>
 python cli.py diagnose
 ```
 
+### Windows 一键启动
+
+| 脚本 | 功能 |
+|------|------|
+| `scripts/start.bat` | 纯净模式（自动检查依赖） |
+| `scripts/monitor.bat` | 监控模式（自动答题） |
+| `scripts/verify.bat` | 验证模式（指纹检测报告） |
+| `scripts/diagnose.bat` | 诊断模式（页面状态检查） |
+
 ## 项目结构
 
 ```
 scholarleaf/
-├── cli.py              # 统一命令行入口
-├── config.py           # 配置文件
-├── core/               # 浏览器/监控核心
-├── launch/             # 启动器
-├── auto/               # 自动化脚本
-├── tests/              # 测试
-├── 一键启动.bat         # Windows 一键启动
-└── requirements.txt    # 依赖列表
+├── cli.py                 # 统一命令行入口
+├── config.py              # 配置文件
+├── check_deps.py          # 依赖检测脚本
+├── requirements.txt       # 依赖列表
+├── core/                  # 浏览器/监控核心
+│   ├── browser.py         #   反检测浏览器封装
+│   ├── monitor.py         #   监控模式
+│   ├── recorder.py        #   录制模式
+│   ├── rules.py           #   规则引擎
+│   └── js/                #   注入脚本
+├── launch/                # 启动器
+├── auto/                  # 自动化脚本
+├── tests/                 # 测试
+└── scripts/               # Windows 一键启动脚本
 ```
 
 ## 依赖
